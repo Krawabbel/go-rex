@@ -1,5 +1,5 @@
-# go-regexp
-a regular expression matcher
+# go-rex
+a regular expression matcher written in Go (Golang)
 
 [![Go](https://github.com/Krawabbel/go-regexp/actions/workflows/go.yml/badge.svg)](https://github.com/Krawabbel/go-regexp/actions/workflows/go.yml)
 
