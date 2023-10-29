@@ -1,6 +1,6 @@
 # go-rex
 a regular expression matcher written in Go (Golang)
 
-[![Go](https://github.com/Krawabbel/go-regexp/actions/workflows/go.yml/badge.svg)](https://github.com/Krawabbel/go-regexp/actions/workflows/go.yml)
+[![Go](https://github.com/Krawabbel/go-rex/actions/workflows/go.yml/badge.svg)](https://github.com/Krawabbel/go-rex/actions/workflows/go.yml)
 
-[![Go Coverage](https://github.com/Krawabbel/go-regexp/wiki/coverage.svg)](https://raw.githack.com/wiki/Krawabbel/go-regexp/coverage.html)
+[![Go Coverage](https://github.com/Krawabbel/go-rex/wiki/coverage.svg)](https://raw.githack.com/wiki/Krawabbel/go-rex/coverage.html)

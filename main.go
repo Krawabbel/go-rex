@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Krawabbel/go-regexp/rex"
+	"github.com/Krawabbel/go-rex/rex"
 )
 
 func main() {
