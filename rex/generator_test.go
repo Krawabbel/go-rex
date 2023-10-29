@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func Test_generate_failse(t *testing.T) {
+func Test_generate_fails(t *testing.T) {
 	type args struct {
 		entry     *state
 		max_depth int
