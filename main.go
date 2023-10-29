@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
 
@@ -8,10 +9,31 @@ import (
 )
 
 func main() {
-	re := os.Args[1]
-	msg := os.Args[2]
-	if found, ctx := rex.Match(re, []byte(msg)); found {
-		fmt.Printf("[SUCCESS] regular expression \"%s\" found:\n%s\n", re, ctx)
+
+	rgx := os.Args[1]
+
+	path := os.Args[2]
+
+	file, err := os.Open(path)
+	if err != nil {
+		panic(err)
 	}
-	fmt.Printf("[FAIL] regular expression \"%s\" not found\n", re)
+	defer file.Close()
+
+	scanner := bufio.NewScanner(file)
+
+	scanner.Split(bufio.ScanLines)
+
+	for line := 0; scanner.Scan(); line++ {
+
+		found, err := rex.Match(rgx, scanner.Bytes())
+
+		if err != nil {
+			panic(err)
+		}
+
+		if found {
+			fmt.Printf("%d: %s\n", line, scanner.Text())
+		}
+	}
 }

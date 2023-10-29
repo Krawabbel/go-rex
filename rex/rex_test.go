@@ -39,7 +39,7 @@ func TestMatch(t *testing.T) {
 		"(a?)(a?)(a?)(a?)a",
 	}
 
-	texts := []string{"", "a", "b", "aa", "bb", "aaaaa", "+", "*", "?", "\\", "(", ")", string([]byte{0x00})}
+	texts := []string{"", "a", "b", "aa", "bb", "ba", "aaaaa", "+", "*", "?", "\\", "(", ")", string([]byte{0x00})}
 
 	for _, pattern := range patterns {
 		for _, text := range texts {

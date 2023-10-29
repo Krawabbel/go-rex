@@ -32,5 +32,10 @@ func Match(pattern string, msg []byte) (bool, error) {
 		return false, fmt.Errorf("match error: %v", err)
 	}
 
-	return match(entry, msg), nil
+	for i := 0; i <= len(msg); i++ {
+		if match(entry, msg[i:]) {
+			return true, nil
+		}
+	}
+	return false, nil
 }
